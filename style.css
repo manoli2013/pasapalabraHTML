@@ -1,0 +1,391 @@
+html {
+    margin: 0 auto;
+    
+}
+.grid {
+   margin: 0 auto;
+   display: grid;
+   grid-template-areas: 
+   "logo main"
+   "scores inputs"
+   "footer footer";
+
+   height: 750px;
+   width: 90vw;    
+   
+   grid-template-rows: 3fr 1fr 10%;
+   grid-template-columns: 1fr 3fr;
+   
+   
+}
+
+.logo {
+    
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+    
+}
+.logo img {
+    max-height: 150px;
+    max-width: 300px;
+    transform: rotate(-90deg);
+    
+}
+button {
+    font-weight: bold;
+    display: inline-block;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+#welcome {
+    
+    grid-area: inputs;
+    color:black;  
+    display: grid;
+    grid-template-areas: 
+    'instrucciones'
+    'form'
+    'button';
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 40% 20%;
+    
+}
+#instrucciones {
+  grid-area: instrucciones;
+  font-size: 18px;
+    
+}
+
+#contactForm {
+  grid-area: form;
+}
+
+#start_button button{
+    grid-area: button;
+    background-color: orange;
+    text-align: center;
+    height: 50px;
+    width: 80px;
+    color: white;
+}
+
+#rosco_container {
+   grid-area: main; 
+   position: relative; 
+   
+   justify-self: center;
+   align-self: center;
+   
+   
+}
+
+#rosco {
+    
+    text-align: center;
+  
+}
+#resolucion {
+  position: absolute;
+    top: 15px;
+    left: -50px;
+  text-align: center;
+}
+
+#rosco .letter {
+    grid-row: 1 / 2; 
+    position: absolute;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-weight: bold;
+    padding-top: 5px;
+    text-align: center;
+   
+}
+.currentLetter {
+  background-color: black;
+}
+.acertada {
+  background-color: green;
+}
+.fallada {
+  background-Color: red;
+}
+.pausada {
+  background-color: lightblue;
+}
+
+
+  #rosco div:nth-of-type(1) {
+    
+    transform: rotate(-93deg) translate(170px) rotate(93deg);
+  }
+  #rosco div:nth-of-type(2) {
+    transform: rotate(-77deg) translate(170px) rotate(77deg);
+  }
+  #rosco div:nth-of-type(3) {
+    transform: rotate(-63deg) translate(170px) rotate(63deg);
+  }
+  #rosco div:nth-of-type(4) {
+    transform: rotate(-50deg) translate(170px) rotate(50deg);
+  }
+  #rosco div:nth-of-type(5) {
+    transform: rotate(-37deg) translate(170px) rotate(37deg);
+  }
+  #rosco div:nth-of-type(6) {
+    transform: rotate(-24deg) translate(170px) rotate(24deg);
+  }
+  #rosco div:nth-of-type(7) {
+    transform: rotate(-11deg) translate(170px) rotate(11deg);
+  }
+  #rosco div:nth-of-type(8) {
+    transform: rotate(2deg) translate(170px) rotate(-2deg);
+  }
+  #rosco div:nth-of-type(9) {
+    transform: rotate(15deg) translate(170px) rotate(-15deg);
+  }
+  #rosco div:nth-of-type(10) {
+    transform: rotate(28deg) translate(170px) rotate(-28deg);
+  }
+  #rosco div:nth-of-type(11) {
+    transform: rotate(41deg) translate(170px) rotate(-41deg);
+  }
+  #rosco div:nth-of-type(12) {
+    transform: rotate(54deg) translate(170px) rotate(-54deg);
+  }
+  #rosco div:nth-of-type(13) {
+    transform: rotate(67deg) translate(170px) rotate(-67deg);
+  }
+  #rosco div:nth-of-type(14) {
+    transform: rotate(80deg) translate(170px) rotate(-80deg);
+  }
+  #rosco div:nth-of-type(15) {
+    transform: rotate(93deg) translate(170px) rotate(-93deg);
+  }
+  #rosco div:nth-of-type(16) {
+    transform: rotate(106deg) translate(170px) rotate(-106deg);
+  }
+  #rosco div:nth-of-type(17) {
+    transform: rotate(119deg) translate(170px) rotate(-119deg);
+  }
+  #rosco div:nth-of-type(18) {
+    transform: rotate(132deg) translate(170px) rotate(-132deg);
+  }
+  #rosco div:nth-of-type(19) {
+    transform: rotate(145deg) translate(170px) rotate(-145deg);
+  }
+  #rosco div:nth-of-type(20) {
+    transform: rotate(159deg) translate(170px) rotate(-159deg);
+  }
+  #rosco div:nth-of-type(21) {
+    transform: rotate(173deg) translate(170px) rotate(-173deg);
+  }
+  #rosco div:nth-of-type(22) {
+    transform: rotate(187deg) translate(170px) rotate(-187deg);
+  }
+  #rosco div:nth-of-type(23) {
+    transform: rotate(200deg) translate(170px) rotate(-200deg);
+  }
+  #rosco div:nth-of-type(24) {
+    transform: rotate(213deg) translate(170px) rotate(-213deg);
+  }
+  #rosco div:nth-of-type(25) {
+    transform: rotate(226deg) translate(170px) rotate(-226deg);
+  }
+  #rosco div:nth-of-type(26) {
+    transform: rotate(239deg) translate(170px) rotate(-239deg);
+  }
+  #rosco div:nth-of-type(27) {
+    transform: rotate(252deg) translate(170px) rotate(-252deg);
+  }
+  #rosco div:nth-of-type(28) {
+    transform: rotate(265deg) translate(170px) rotate(-265deg);
+  }
+
+
+
+#scores {
+    
+    grid-area: scores;
+    justify-self: center;
+    align-self: end;
+    display: grid;
+    display: none;
+   
+}
+#time_left, #numAciertos {
+    background-color: orange;
+    border: 3px solid white;
+    font-size: 25px;
+    
+    text-align: center;
+    font-weight: bold;
+    padding: 3%;
+}
+
+#time_left {
+    color: white;
+    border-radius: 55%;
+    padding-top: 20px;
+    width: 60px;
+    height: 40px;
+    display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  text-align: center;
+    margin:0 auto;
+  
+}
+
+#numAciertos {
+    color:blue;
+    margin-top: 10px;
+    padding-top: 15px;
+    width: 60px;
+    height: 40px;
+}
+
+
+#userInputs {
+  
+    grid-area: inputs;
+    width: 90vw;
+    justify-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+#currentQuestion {
+    
+    
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#answerArea {
+    
+    color: orange;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+#stop {
+    
+    color: red;
+}
+#pasapalabra {
+ 
+    color: green;
+}
+#responder {
+  
+    color: blue;
+}
+
+#playAgain {
+  
+  color: red;
+  
+  justify-self: center;
+  background-color: grey;
+  border: 1px solid black;
+  
+}
+#buttonRanking {
+  
+  justify-self: center;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; 
+  text-align: center;
+  font-weight: bold;
+  color: orange;
+  
+}
+
+
+
+/* The Close Button */
+#closeRanking {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  
+}
+#footer {
+    
+    grid-area: footer;
+    font-size: 12px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 20px;
+    display: none;
+}
+
+
+@media all and (max-width: 992px) and (min-width: 310px)  {
+    .grid {
+    height: 760px;
+   
+    grid-template-areas: 
+    "logo"
+    "main"
+    "scores"
+    "inputs"
+    "footer";
+    
+    grid-template-rows: 15% 40% 20% 20% 5%;
+    grid-template-columns: 1fr;
+
+    
+  }
+  .logo img {
+    
+    transform: rotate(0deg);
+    margin-bottom: 10px;
+    
+}
+
+
+#time_left, #numAciertos {
+  display: inline-block;
+ 
+}
+#numAciertos {
+  margin-top: 0px;
+  
+}
+
+}

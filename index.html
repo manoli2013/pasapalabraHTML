@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PasapalabraHTML</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class = "grid">
+
+        <section class = "logo">
+            <img src="logo_skylab.png" alt="Logo Skylab">
+        </section>
+
+        <section id = "rosco_container"> 
+
+            <div id = "rosco">
+                <div id = "A" class = "letter">A</div>
+                <div id = "B" class = "letter">B</div>
+                <div id = "C" class = "letter">C</div>
+                <div id = "D" class = "letter">D</div>
+                <div id = "E" class = "letter">E</div>
+                <div id = "F" class = "letter">F</div>
+                <div id = "G" class = "letter">G</div>
+                <div id = "H" class = "letter">H</div>
+                <div id = "I" class = "letter">I</div>
+                <div id = "J" class = "letter">J</div>
+                <div id = "K" class = "letter">K</div>
+                <div id = "L" class = "letter">L</div>
+                
+                <div id = "M" class = "letter">M</div>
+                <div id = "N" class = "letter">N</div>
+                <div id = "Ñ" class = "letter">Ñ</div>
+                <div id = "O" class = "letter">O</div>
+                <div id = "P" class = "letter">P</div>
+                <div id = "Q" class = "letter">Q</div>
+                <div id = "R" class = "letter">R</div>
+                <div id = "S" class = "letter">S</div>
+                <div id = "T" class = "letter">T</div>
+                <div id = "U" class = "letter">U</div>
+                <div id = "V" class = "letter">V</div>
+                <div id = "W" class = "letter">W</div>
+                <div id = "X" class = "letter">X</div>
+                <div id = "Y" class = "letter">Y</div>
+                <div id = "Z" class = "letter">Z</div>
+            </div>      
+            <div id = "resolucion">
+                <h2 id = "resultadoJugada"></h2>
+                
+            </div>
+
+        </section>
+
+        <audio id = 'aciertoSound' src = "aciertoSound.mp3"></audio>
+        <audio id = 'errorSound' src="errorSound.mp3"></audio>
+        <audio id = 'pasapalabraSound' src="pasapalabraSound.mp3"></audio>
+        <audio id = 'bote' src="bote.mp3"></audio>
+        <audio id = 'finSound' src="finPartida.mp3"></audio>
+        
+        <section id = "welcome">
+            <div id = "instrucciones">
+                
+                <h2>BIENVENIDOS AL JUEGO DE PASAPALABRA DE SKYLAB CODERS ACADEMY</h2>
+                
+                <p>Basado en el exitoso concurso de televisión Pasaopalabra de Telecinco, las normas son muy sencillas:</p> 
+                <p>Se mostrarán unas definiciones por pantalla y el usuario deberá responder con la palabra a la que corresponden. El usuario tiene la opción de decir pasapalabra y dejar esa definición para más adelante</p>
+                <p>El programa es sensible a las acentuaciones, así que se debe introducir la palabra sin tilde. Es posible utilizar la tecla ENTER para enviar la palabra y el SPACE para hacer pasapalabra</p>
+                <p>Para comenzar introduce tus datos:</p>
+            
+            
+            <form id = "contactForm">
+                <div>
+                    <label for="user">User:</label>
+                    <input type="text" id="user" required value = ""/>
+                </div>
+                    
+            </form>
+        
+            <div id = "start_button">
+                <button id = "init">A Jugar!</button>
+            </div> 
+            
+            </div>
+
+        </section>
+        
+        <section id = "scores">
+            <div id = "time_left"></div>
+            <div id = "numAciertos">0</div>
+        </section>
+
+        <section id = "userInputs">
+            <div> 
+                <p id= "currentQuestion"></p>
+            </div> 
+            <div>
+                <input type="text" id="answerArea" value = ''></input>
+            </div>
+
+            <div>
+                <button type = "button" id = "responder" class = "answer_button">Responder</button>
+                <button type = "button" id = "pasapalabra" class = "answer_button">Pasapalabra</button>
+                <button type = "button" id = "stop" class = "answer_button">Stop</button>
+            </div>
+            
+            <div>
+                <button id ="playAgain">PLAY AGAIN</button>
+            
+                <!-- Trigger/Open The Modal -->
+                <button id="buttonRanking">VIEW RANKING</button>
+            </div>
+            
+            
+        </section>    
+            <!-- The Modal -->
+        <div id="modalRanking" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="closeRanking">&times;</span>
+                <h1>RANKING JUGADORES</h1>
+                <p id = "rankingJugadores"></p>
+            </div>  
+       
+        </div> 
+    
+        
+    <footer id = "footer"> Made with love by Manuela Pascual Sáez</footer>
+    
+    <script src = "index.js"></script>
+</body>
+</html>
